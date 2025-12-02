@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Léandre Simo</title>
     
-    <!-- CORRECTION ICI : Le lien est nettoyé pour que les logos s'affichent -->
+    <!-- Lien vers les icônes (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Lien vers ton fichier CSS -->
@@ -70,10 +70,10 @@
                         <h3>Qui suis-je ?</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.8;">
-                        Je m'appelle <strong>Léandre Simo</strong>. Actuellement étudiant en 1ère année de BUT Réseaux & Télécommunications, j'ai un attait pour les nouvelles technologies et le développement système et cloud.
+                        Je m'appelle <strong>Léandre Simo</strong>. Actuellement étudiant en 1ère année de BUT Réseaux & Télécommunications, je suis passionné par les nouvelles technologies et la cybersécurité.
                     </p>
                     <p style="color: #475569; margin-top: 15px; line-height: 1.8;">
-                        Curieux et rigoureux, je suis toujours prêt à revelever des défis techniques et à apprendre de nouvelles compétences.
+                        Curieux et rigoureux, j'aime comprendre comment fonctionnent les systèmes complexes pour mieux les optimiser et les sécuriser.
                     </p>
                 </div>
 
@@ -91,7 +91,7 @@
                     <div class="skills-list">
                         <span class="skill-tag">HTML / CSS</span>
                         <span class="skill-tag">Administration Système</span>
-                        <span class="skill-tag">Réseaux</span>
+                        <span class="skill-tag">Réseaux (Cisco)</span>
                         <span class="skill-tag">Linux</span>
                         <span class="skill-tag">Python</span>
                     </div>
@@ -118,13 +118,13 @@
                         <li>
                             <div class="timeline-date">2025 - Présent</div>
                             <strong>BUT Réseaux & Télécommunications</strong>
-                            <div class="timeline-place">IUT de Béziers</div>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Apprentissage de l'architecture réseau et des télécommunications.</p>
+                            <div class="timeline-place">IUT de Béziers (34)</div>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Apprentissage de l'architecture réseau, de la cybersécurité et du développement.</p>
                         </li>
                         <li>
-                            <div class="timeline-date">2022 - 2025</div>
+                            <div class="timeline-date">2024</div>
                             <strong>Baccalauréat Général</strong>
-                            <div class="timeline-place">Lycée Irène et Frédéric Joliot-Curie à Sète</div>
+                            <div class="timeline-place">Lycée Jean Moulin</div>
                             <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
                         </li>
                     </ul>
@@ -151,7 +151,7 @@
                             <span class="tag">Vulgarisation</span>
                         </div>
                         
-                        <a href="projet-cyber.html" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
+                        <a href="projet-cyber.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
                             Voir plus
                         </a>
                     </div>
@@ -170,7 +170,7 @@
                             <span class="tag">Entretiens professionnel</span>                   
                         </div>
 
-                        <a href="projet-identite.html" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
+                        <a href="projet-identite.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
                             Voir plus
                         </a>
                     </div>
@@ -256,5 +256,17 @@
 
     <!-- Lien vers ton fichier Javascript -->
     <script src="script.js"></script>
+
+    <!-- NOUVEAU SCRIPT : Gère le retour automatique sur l'onglet Projets -->
+    <script>
+        // Ce code s'exécute quand la page a fini de charger
+        window.addEventListener('load', function() {
+            // Si l'adresse web finit par "#projects"
+            if (window.location.hash === '#projects') {
+                // On active la fonction qui change d'onglet
+                switchTab('projects');
+            }
+        });
+    </script>
 </body>
 </html>
