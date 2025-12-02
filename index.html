@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Léandre Simo</title>
+    
+    <!-- CORRECTION ICI : Le lien est nettoyé pour que les logos s'affichent -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" onclick="switchTab('home')">
+                Mon portfolio<span>.</span>
+            </div>
+            <nav class="nav-links">
+                <button class="nav-btn" onclick="switchTab('about')" id="btn-about">
+                    <i data-lucide="user"></i> <span>À propos</span>
+                </button>
+                <button class="nav-btn" onclick="switchTab('projects')" id="btn-projects">
+                    <i data-lucide="code"></i> <span>Projets</span>
+                </button>
+                <button class="nav-btn" onclick="switchTab('contact')" id="btn-contact">
+                    <i data-lucide="mail"></i> <span>Contact</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- SECTION ACCUEIL -->
+        <section id="home" class="active-section">
+            <div class="profile-img-container">
+                <img src="moi.png" alt="Léandre Simo" class="profile-img">
+            </div>
+            <h2>Bonjour !</h2>
+            <h1>Je suis <span class="gradient-text">Léandre Simo</span></h1>
+            <p class="subtitle">Bienvenue sur mon portfolio. Actuellement étudiant en Bachelor Réseaux et Télécommunications, je vous partage mes projets.</p>
+            
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="switchTab('projects')">
+                    <i data-lucide="code"></i> Mes Projets
+                </button>
+                <button class="btn btn-secondary" onclick="switchTab('contact')">
+                    <i data-lucide="mail"></i> Me Contacter
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION À PROPOS -->
+        <section id="about" class="hidden animate-section">
+            <h2 style="margin-bottom: 30px;">À Propos de moi</h2>
+            
+            <div class="about-grid">
+                
+                <!-- Carte 1 : Présentation -->
+                <div class="about-card">
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <!-- Logo Utilisateur -->
+                            <i data-lucide="user-circle-2" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <h3>Qui suis-je ?</h3>
+                    </div>
+                    <p style="color: #475569; line-height: 1.8;">
+                        Je m'appelle <strong>Léandre Simo</strong>. Actuellement étudiant en 1ère année de BUT Réseaux & Télécommunications, j'ai un attait pour les nouvelles technologies et le développement système et cloud.
+                    </p>
+                    <p style="color: #475569; margin-top: 15px; line-height: 1.8;">
+                        Curieux et rigoureux, je suis toujours prêt à revelever des défis techniques et à apprendre de nouvelles compétences.
+                    </p>
+                </div>
+
+                <!-- Carte 2 : Compétences -->
+                <div class="about-card">
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <!-- Logo Éclair (Zap) pour le dynamisme -->
+                            <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <h3>Mes Compétences</h3>
+                    </div>
+                    
+                    <h4 style="font-size: 0.9rem; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Technique</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">Administration Système</span>
+                        <span class="skill-tag">Réseaux</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+
+                    <h4 style="font-size: 0.9rem; color: #64748b; margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 1px;">Transverse</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Gestion de projet</span>
+                        <span class="skill-tag">Travail d'équipe</span>
+                        <span class="skill-tag">Anglais Technique</span>
+                    </div>
+                </div>
+
+                <!-- Carte 3 : Parcours Scolaire -->
+                <div class="about-card">
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <!-- Logo Chapeau diplômé -->
+                            <i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <h3>Mon Parcours</h3>
+                    </div>
+                    
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-date">2025 - Présent</div>
+                            <strong>BUT Réseaux & Télécommunications</strong>
+                            <div class="timeline-place">IUT de Béziers</div>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Apprentissage de l'architecture réseau et des télécommunications.</p>
+                        </li>
+                        <li>
+                            <div class="timeline-date">2022 - 2025</div>
+                            <strong>Baccalauréat Général</strong>
+                            <div class="timeline-place">Lycée Irène et Frédéric Joliot-Curie à Sète</div>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION PROJETS -->
+        <section id="projects" class="hidden animate-section">
+            <h2 style="margin-bottom: 30px;">Mes Projets</h2>
+            <div class="projects-grid">
+                
+                <!-- PROJET 1 -->
+                <div class="project-card">
+                    <img src="sae11.jpg" alt="E-commerce" class="project-img">
+                    <div class="project-content">
+                        <h3>SAÉ1.1 - Hygiène informatique et Cybersécurité</h3>
+                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;">Octobre - Novembre 2025</p>
+                        <p style="color: #64748b; margin: 10px 0;">Présentation de la cybersécurité générale sur internet avec vulgarisation.</p>
+                        <div class="tags">
+                            <span class="tag">Powerpoint</span>
+                            <span class="tag">Automnomie</span>
+                            <span class="tag">Vulgarisation</span>
+                        </div>
+                        
+                        <a href="projet-cyber.html" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
+                            Voir plus
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJET 2 -->
+                <div class="project-card">
+                    <img src="sae14.png" alt="Dashboard" class="project-img">
+                    <div class="project-content">
+                        <h3>SAÉ1.4 - Se présenter sur Internet</h3>
+                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;">Novembre - Décembre 2025</p>
+                        <p style="color: #64748b; margin: 10px 0;">Professionnalisation des profils en ligne</p>
+                        <div class="tags">
+                            <span class="tag">Profil linkedin</span>
+                            <span class="tag">Portfolio de présentation</span>
+                            <span class="tag">Entretiens professionnel</span>                   
+                        </div>
+
+                        <a href="projet-identite.html" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
+                            Voir plus
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION CONTACT (Version Finale avec Image Gmail) -->
+        <section id="contact" class="hidden animate-section">
+            <h2 style="margin-bottom: 30px;">Me Contacter</h2>
+            <div class="contact-layout">
+                <!-- Partie Gauche (Infos) -->
+                <div>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem;">Une idée de projet ? N'hésitez pas à m'écrire pour en discuter.</p>
+                    
+                    <div class="contact-card">
+                        <div class="icon-box">
+                            <img src="gmail.png" alt="Gmail" style="width: 24px; height: 24px;">
+                        </div>
+                        <div>
+                            <p style="font-size: 0.9rem; color: #64748b;">Email</p>
+                            <p style="font-weight: 600;">leandre.simo34@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 15px; margin-top: 30px;">
+                        <a href="https://www.linkedin.com/in/leandresimo/" target="_blank" class="btn btn-secondary">
+                            <i data-lucide="linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Partie Droite (Formulaire) -->
+                <form onsubmit="sendGmail(event)">
+                    <div class="form-group">
+                        <label>Nom</label>
+                        <input type="text" id="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        Envoyer via Gmail <i data-lucide="send" style="margin-left: 8px; width: 16px;"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Script amélioré (Message en premier) -->
+            <script>
+                function sendGmail(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+
+                    // Sujet
+                    const subject = encodeURIComponent("Contact Portfolio - " + name);
+
+                    // Corps du message (Message en premier, signature ensuite)
+                    const bodyContent = `${message}\n\n--------------------------------\nEnvoyé par : ${name}\nEmail de contact : ${email}`;
+                    const body = encodeURIComponent(bodyContent);
+                    
+                    // Lien Gmail
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=leandre.simo34@gmail.com&su=${subject}&body=${body}`;
+                    
+                    window.open(gmailUrl, '_blank');
+                }
+            </script>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Léandre Simo. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Lien vers ton fichier Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ 1.1 - Cybersécurité</title>
+    
+    <!-- Bibliothèque d'icônes -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tes fichiers CSS -->
+    <link rel="stylesheet" href="style.css">       <!-- Ton style global -->
+    <link rel="stylesheet" href="projet-cyber.css"> <!-- Le style spécifique à cette page -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="project-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Mon portfolio<span>.</span></a>
+            </div>
+            <a href="index.html" class="btn btn-secondary btn-back">
+                <i data-lucide="arrow-left"></i> Retour
+            </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- BANDEAU 1 : HÉRO -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                
+                <!-- Infos Textes -->
+                <div class="hero-text">
+                    <div class="hero-badges">
+                        <span class="badge-blue">
+                            <i data-lucide="clock"></i> 14 Heures
+                        </span>
+                        <span class="badge-gray">
+                            <i data-lucide="calendar"></i> Oct - Nov 2025
+                        </span>
+                    </div>
+
+                    <h1>SAÉ 1.1 : Hygiène Informatique & Cybersécurité</h1>
+                    <p class="hero-subtitle">
+                        Projet de vulgarisation technique visant à sensibiliser un public novice aux risques numériques.
+                    </p>
+                </div>
+
+                <!-- Image -->
+                <div class="hero-image-wrapper">
+                    <img src="sae11.jpg" alt="Projet Cyber" class="hero-img">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BANDEAU 2 : DÉTAILS -->
+        <section class="container details-section animate-section">
+            
+            <div class="details-card">
+                <div class="card-content">
+                    
+                    <!-- Description -->
+                    <div class="section-block">
+                        <h2 class="title-blue">Description du projet</h2>
+                        <p>
+                            L'objectif de cette SAE était de vulgarises des personnes non initité aux bonnes pratiques en cybersécurité via le biais d'une présentation orale accompagnée par un diaporama. Cette présentation devait pouvoir se propager aux plus de personnes possibles, c'est pour cela que l'oral est en anglais. Chaque groupe de la promotion avait un sujet différent. Dans notre cas nous traitions les botnets, qu'est ce que c'est, quel est leur action et comment s'en protéger.
+                        </p>
+                    </div>
+
+                    <!-- Grille Équipe / Participation -->
+                    <div class="grid-2-cols">
+                        
+                        <!-- Équipe -->
+                        <div>
+                            <h2 class="title-purple">L'équipe projet</h2>
+                            <ul class="team-list">
+                                <li>
+                                    <div class="avatar avatar-blue">L</div>
+                                    Léandre Simo
+                                </li>
+                                <li>
+                                    <div class="avatar avatar-blue">R</div>
+                                    Rayen Khaskhoussi 
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Participation -->
+                        <div>
+                            <h2 class="title-blue">Ma participation</h2>
+                            <p class="mb-10">J'ai principalement travaillé sur :</p>
+                            <div class="tags">
+                                <span class="tag tag-green">Mon anglais</span>
+                                <span class="tag tag-green">Support Powerpoint</span>
+                                <span class="tag tag-green">Recherche d'information</span>
+                            </div>
+                            <p class="text-sm mt-15">
+                                J'ai notamment rédigé une partie du script et j'ai aidé beaucoup à la recherche d'information.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Résultats -->
+                    <div class="results-box">
+                        <h2 class="title-dark">Résultats & Bilan</h2>
+                        <div class="results-grid">
+                            <div>
+                                <h3 class="subtitle-blue">Résultats obtenus</h3>
+                                <ul class="results-list">
+                                    <li>Note finale : <strong>En attente</strong></li>
+                                    <li>Présentation filmé pour être remis aux évaluateurs</li>
+                                </ul>
+                            </div>
+                            <div class="border-left">
+                                <h3 class="subtitle-blue">Auto-évaluation</h3>
+                                <p class="italic-text">
+                                    "Ce projet m'a permis d'apprendre à mieux contrôler les supports visuels tel que Powerpoint, en apprendre plus sur les bonnes pratiques de cybersécurité et d'apprendre à utiliser du matériel vidéo (caméra vidéo et micro-cravate)."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Téléchargements -->
+                   <!-- PARTIE TÉLÉCHARGEMENT TESTÉE -->
+                    <div class="files-grid">
+                        
+                        <!-- Bouton pour le PowerPoint -->
+                        <!-- Assurez-vous que le fichier s'appelle bien diapo.pptx -->
+                        <a href="diapo.pptx" download class="file-card">
+                            <div class="file-icon bg-orange">
+                                <i data-lucide="presentation"></i>
+                            </div>
+                            <div>
+                                <div class="file-name">Télécharger le diaporama</div>
+                                <div class="file-size">Fichier PowerPoint</div>
+                            </div>
+                            <i data-lucide="download" class="download-icon"></i>
+                        </a>
+
+                        <!-- VIDÉO YOUTUBE (Remplace le rapport PDF) -->
+                        <div style="flex: 1; min-width: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; aspect-ratio: 16/9;">
+                            <iframe 
+                                src="https://www.youtube.com/embed/RaYXPNt7M1w" 
+                                title="Vidéo du projet" 
+                                style="width: 100%; height: 100%; border: none;"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Léandre Simo. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Ton fichier JS -->
+    <script src="projet-cyber.js"></script>
+</body>
+</html>
