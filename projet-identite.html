@@ -5,176 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAÉ 1.4 - Identité Numérique</title>
     
-    <!-- Bibliothèque d'icônes -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Tes fichiers CSS -->
-    <link rel="stylesheet" href="style.css">          <!-- Ton style global -->
-    <link rel="stylesheet" href="projet-identite.css"> <!-- Le style spécifique à cette page -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projet-identite.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <header class="project-header">
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">Mon portfolio<span>.</span></a>
             </div>
-            <a href="index.html#projects" class="btn btn-secondary btn-back">
-                <i data-lucide="arrow-left"></i> Retour
-            </a>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="index.html#projects" class="btn btn-secondary btn-back">
+                    <i data-lucide="arrow-left"></i> <span data-i18n="btn_back">Retour</span>
+                </a>
+                <button class="nav-btn lang-btn" onclick="toggleLanguage()">
+                    <span id="lang-display">EN</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        
-        <!-- BANDEAU 1 : HÉRO -->
         <section class="hero-section">
             <div class="container hero-container">
-                
-                <!-- Infos Textes -->
                 <div class="hero-text">
                     <div class="hero-badges">
-                        <span class="badge-blue">
-                            <i data-lucide="clock"></i> 20 Heures
-                        </span>
-                        <span class="badge-gray">
-                            <i data-lucide="calendar"></i> Nov - Déc 2025
-                        </span>
+                        <span class="badge-blue"><i data-lucide="clock"></i> 20 Heures</span>
+                        <span class="badge-gray"><i data-lucide="calendar"></i> Nov - Déc 2025</span>
                     </div>
-
-                    <h1>SAÉ 1.4 : Se présenter sur Internet</h1>
-                    <p class="hero-subtitle">
-                        Construction d'une identité numérique professionnelle cohérente et préparation à l'insertion en entreprise.
-                    </p>
+                    <h1 data-i18n="id_title">SAÉ 1.4 : Se présenter sur Internet</h1>
+                    <p class="hero-subtitle" data-i18n="id_subtitle">Construction d'une identité numérique...</p>
                 </div>
-
-                <!-- Image -->
                 <div class="hero-image-wrapper">
-                    <!-- Assure-toi d'avoir l'image sae14.png -->
                     <img src="sae14.png" alt="Projet Identité" class="hero-img">
                 </div>
-
             </div>
         </section>
 
-
-        <!-- BANDEAU 2 : DÉTAILS -->
         <section class="container details-section animate-section">
-            
             <div class="details-card">
                 <div class="card-content">
-                    
-                    <!-- Description -->
                     <div class="section-block">
-                        <h2 class="title-blue">Contexte du projet</h2>
-                        <p>
-                            Lors de ce projet, nous avons été ammenés à construire les bases pour notre insertion professionnelle via la création d'une identité numérique (portfolio de présentation, compte Linkedin, signature professionnelle gmail et mail universitaire...)
-                        </p>
+                        <h2 class="title-blue" data-i18n="id_context_title">Contexte du projet</h2>
+                        <p data-i18n="id_context_text">Lors de ce projet...</p>
                     </div>
 
-                    <!-- Grille Équipe / Participation -->
                     <div class="grid-2-cols">
-                        
-                        <!-- Équipe (Souvent individuel pour ce projet) -->
                         <div>
-                            <h2 class="title-purple">Organisation</h2>
+                            <h2 class="title-purple" data-i18n="id_org_title">Organisation</h2>
                             <ul class="team-list">
-                                <li>
-                                    <div class="avatar avatar-blue">L</div>
-                                    <strong>Léandre Simo</strong> (Travail Individuel)
-                                </li>
+                                <li><div class="avatar avatar-blue">L</div> <strong>Léandre Simo</strong> <span data-i18n="id_solo">(Travail Individuel)</span></li>
                             </ul>
                         </div>
-
-                        <!-- Participation -->
                         <div>
-                            <h2 class="title-blue">Mes missions</h2>
-                            <p class="mb-10">J'ai travaillé sur plusieurs axes :</p>
+                            <h2 class="title-blue" data-i18n="id_missions_title">Mes missions</h2>
+                            <p class="mb-10" data-i18n="id_missions_intro">J'ai travaillé sur plusieurs axes :</p>
                             <div class="tags">
-                                <span class="tag tag-green">Développement Web</span>
-                                <span class="tag tag-green">Contact de professionnel</span>
-                                <span class="tag tag-green">Réseautage LinkedIn</span>
+                                <span class="tag tag-green" data-i18n="tag_web">Développement Web</span>
+                                <span class="tag tag-green" data-i18n="tag_contact">Contact de professionnel</span>
+                                <span class="tag tag-green" data-i18n="tag_network">Réseautage LinkedIn</span>
                             </div>
-                            <p class="text-sm mt-15">
-                                La tâche la plus complexe pour moi a été de réussir à faire un réseautage correct sur LinkedIn et également de contacter des anciens élèves de ma fillière pour les interviewer sur leurs parcours professionnelles.
-                            </p>
+                            <p class="text-sm mt-15" data-i18n="id_missions_detail">La tâche la plus complexe...</p>
                         </div>
                     </div>
 
-                    <!-- Résultats -->
                     <div class="results-box">
-                        <h2 class="title-dark">Bilan personnel</h2>
+                        <h2 class="title-dark" data-i18n="id_bilan_title">Bilan personnel</h2>
                         <div class="results-grid">
                             <div>
-                                <h3 class="subtitle-blue">Compétences acquises</h3>
+                                <h3 class="subtitle-blue" data-i18n="id_skills_acq">Compétences acquises</h3>
                                 <ul class="results-list">
-                                    <li>Initiaion à l'e-reputation.</li>
-                                    <li>Capacité à parler de soi.</li>
-                                    <li>Création d'un réseau professionnel (150+ relations).</li>
+                                    <li data-i18n="id_list_1">Initiaion à l'e-reputation.</li>
+                                    <li data-i18n="id_list_2">Capacité à parler de soi.</li>
+                                    <li data-i18n="id_list_3">Création d'un réseau...</li>
                                 </ul>
                             </div>
                             <div class="border-left">
-                                <h3 class="subtitle-blue">Retour d'expérience</h3>
-                                <p class="italic-text">
-                                    "J'ai appris que chaque trace sur internet comptent, il est donc necessaire de soigner son identité numérique."
-                                </p>
+                                <h3 class="subtitle-blue" data-i18n="id_retex_title">Retour d'expérience</h3>
+                                <p class="italic-text" data-i18n="id_retex_text">"J'ai appris que chaque trace..."</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Vidéo & Liens -->
-                    <a href="index.html" target="_blank" class="file-card">
-                                <div class="file-icon bg-blue">
-                                    <i data-lucide="linkedin"></i>
-                                </div>
-                                <div>
-                                    <div class="file-name">Mon Portfolio de Présentation</div>
-                                    <div class="file-size">Visiter la page ↗</div>
-                                </div>
-                                <i data-lucide="external-link" class="download-icon"></i>
-                            </a>
-
-                            
-                            <!-- Lien vers LinkedIn -->
-                            <a href="https://www.linkedin.com/in/leandresimo/" target="_blank" class="file-card">
-                                <div class="file-icon bg-blue">
-                                    <i data-lucide="linkedin"></i>
-                                </div>
-                                <div>
-                                    <div class="file-name">Mon Profil LinkedIn</div>
-                                    <div class="file-size">Visiter la page ↗</div>
-                                </div>
-                                <i data-lucide="external-link" class="download-icon"></i>
-                            </a>
-
-                            <!-- Bouton CV PDF -->
-                            <!-- Pense à mettre ton fichier cv.pdf dans le dossier -->
-                            <a href="cv.pdf" download class="file-card">
-                                <div class="file-icon bg-red">
-                                    <i data-lucide="file-text"></i>
-                                </div>
-                                <div>
-                                    <div class="file-name">Mon CV complet</div>
-                                    <div class="file-size">Fichier PDF</div>
-                                </div>
-                                <i data-lucide="download" class="download-icon"></i>
-                            </a>
-
-                        </div>
+                    <div class="files-grid">
+                        <a href="index.html" target="_blank" class="file-card">
+                            <div class="file-icon bg-blue"><i data-lucide="layout"></i></div>
+                            <div>
+                                <div class="file-name" data-i18n="btn_portfolio">Mon Portfolio de Présentation</div>
+                                <div class="file-size" data-i18n="btn_visit">Visiter la page ↗</div>
+                            </div>
+                            <i data-lucide="external-link" class="download-icon"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/leandresimo/" target="_blank" class="file-card">
+                            <div class="file-icon bg-blue"><i data-lucide="linkedin"></i></div>
+                            <div>
+                                <div class="file-name" data-i18n="btn_linkedin">Mon Profil LinkedIn</div>
+                                <div class="file-size" data-i18n="btn_visit">Visiter la page ↗</div>
+                            </div>
+                            <i data-lucide="external-link" class="download-icon"></i>
+                        </a>
+                        <a href="cv.pdf" download class="file-card">
+                            <div class="file-icon bg-red"><i data-lucide="file-text"></i></div>
+                            <div>
+                                <div class="file-name" data-i18n="btn_cv">Mon CV complet</div>
+                                <div class="file-size" data-i18n="sub_cv">Fichier PDF</div>
+                            </div>
+                            <i data-lucide="download" class="download-icon"></i>
+                        </a>
                     </div>
-
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer>
-        <p>© 2025 Léandre Simo. Tous droits réservés.</p>
-    </footer>
+    <footer><p data-i18n="footer">© 2025 Léandre Simo. Tous droits réservés.</p></footer>
 
-    <!-- Ton fichier JS -->
+    <script src="script.js"></script>
     <script src="projet-identite.js"></script>
 </body>
 </html>

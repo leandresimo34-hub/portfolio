@@ -712,3 +712,16 @@ p {
     color: #64748b;
     font-style: italic;
 }
+
+.lang-btn {
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    font-weight: bold;
+    padding: 8px 15px;
+    margin-left: 10px;
+}
+
+.lang-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}

@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Léandre Simo</title>
     
-    <!-- Lien vers les icônes (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Lien vers ton fichier CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <div class="logo" onclick="switchTab('home')">
-                Mon portfolio<span>.</span>
+                Portfolio<span>.</span>
             </div>
             <nav class="nav-links">
                 <button class="nav-btn" onclick="switchTab('about')" id="btn-about">
-                    <i data-lucide="user"></i> <span>À propos</span>
+                    <i data-lucide="user"></i> <span data-i18n="nav_about">À propos</span>
                 </button>
                 <button class="nav-btn" onclick="switchTab('projects')" id="btn-projects">
-                    <i data-lucide="code"></i> <span>Projets</span>
+                    <i data-lucide="code"></i> <span data-i18n="nav_projects">Projets</span>
                 </button>
                 <button class="nav-btn" onclick="switchTab('contact')" id="btn-contact">
-                    <i data-lucide="mail"></i> <span>Contact</span>
+                    <i data-lucide="mail"></i> <span data-i18n="nav_contact">Contact</span>
+                </button>
+                
+                <button class="nav-btn lang-btn" onclick="toggleLanguage()">
+                    <span id="lang-display">EN</span>
                 </button>
             </nav>
         </div>
@@ -35,97 +36,89 @@
 
     <main class="container">
         
-        <!-- SECTION ACCUEIL -->
         <section id="home" class="active-section">
             <div class="profile-img-container">
                 <img src="moi.png" alt="Léandre Simo" class="profile-img">
             </div>
-            <h2>Bonjour !</h2>
-            <h1>Je suis <span class="gradient-text">Léandre Simo</span></h1>
-            <p class="subtitle">Bienvenue sur mon portfolio. Actuellement étudiant en Bachelor Réseaux et Télécommunications, je vous partage mes projets.</p>
+            <h2 data-i18n="home_hello">Bonjour !</h2>
+            <h1><span data-i18n="home_iam">Je suis</span> <span class="gradient-text">Léandre Simo</span></h1>
+            <p class="subtitle" data-i18n="home_subtitle">Bienvenue sur mon portfolio. Actuellement étudiant en Bachelor Réseaux et Télécommunications, je vous partage mes projets.</p>
             
             <div class="cta-buttons">
                 <button class="btn btn-primary" onclick="switchTab('projects')">
-                    <i data-lucide="code"></i> Mes Projets
+                    <i data-lucide="code"></i> <span data-i18n="btn_projects">Mes Projets</span>
                 </button>
                 <button class="btn btn-secondary" onclick="switchTab('contact')">
-                    <i data-lucide="mail"></i> Me Contacter
+                    <i data-lucide="mail"></i> <span data-i18n="btn_contact">Me Contacter</span>
                 </button>
             </div>
         </section>
 
-        <!-- SECTION À PROPOS -->
         <section id="about" class="hidden animate-section">
-            <h2 style="margin-bottom: 30px;">À Propos de moi</h2>
+            <h2 style="margin-bottom: 30px;" data-i18n="about_title">À Propos de moi</h2>
             
             <div class="about-grid">
                 
-                <!-- Carte 1 : Présentation -->
                 <div class="about-card">
                     <div class="card-header">
                         <div class="icon-circle">
-                            <!-- Logo Utilisateur -->
                             <i data-lucide="user-circle-2" style="width: 24px; height: 24px;"></i>
                         </div>
-                        <h3>Qui suis-je ?</h3>
+                        <h3 data-i18n="about_who_title">Qui suis-je ?</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.8;">
+                    <p style="color: #475569; line-height: 1.8;" data-i18n="about_who_text1">
                         Je m'appelle <strong>Léandre Simo</strong>. Actuellement étudiant en 1ère année de BUT Réseaux & Télécommunications, j'ai un attrait pour les nouvelles technologies et le développement système et cloud.
                     </p>
-                    <p style="color: #475569; margin-top: 15px; line-height: 1.8;">
+                    <p style="color: #475569; margin-top: 15px; line-height: 1.8;" data-i18n="about_who_text2">
                         Curieux et rigoureux, j'aime les nouveaux challenges et j'aime découvrir de nouvelles façons de travailler et d'apprendre.
                     </p>
                 </div>
 
-                <!-- Carte 2 : Compétences -->
                 <div class="about-card">
                     <div class="card-header">
                         <div class="icon-circle">
-                            <!-- Logo Éclair (Zap) pour le dynamisme -->
                             <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
                         </div>
-                        <h3>Mes Compétences</h3>
+                        <h3 data-i18n="about_skills_title">Mes Compétences</h3>
                     </div>
                     
-                    <h4 style="font-size: 0.9rem; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Technique</h4>
+                    <h4 style="font-size: 0.9rem; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="skills_tech">Technique</h4>
                     <div class="skills-list">
-                        <span class="skill-tag">Télécommunications</span>
-                        <span class="skill-tag">Administration Système</span>
-                        <span class="skill-tag">Réseaux</span>
+                        <span class="skill-tag" data-i18n="skill_telecom">Télécommunications</span>
+                        <span class="skill-tag" data-i18n="skill_sysadmin">Administration Système</span>
+                        <span class="skill-tag" data-i18n="skill_network">Réseaux</span>
                         <span class="skill-tag">Linux</span>
                         <span class="skill-tag">Python</span>
                     </div>
 
-                    <h4 style="font-size: 0.9rem; color: #64748b; margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 1px;">Transverse</h4>
+                    <h4 style="font-size: 0.9rem; color: #64748b; margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="skills_soft">Transverse</h4>
                     <div class="skills-list">
-                        <span class="skill-tag">Gestion de projet</span>
-                        <span class="skill-tag">Travail d'équipe</span>
-                        <span class="skill-tag">Anglais Technique</span>
+                        <span class="skill-tag" data-i18n="skill_project">Gestion de projet</span>
+                        <span class="skill-tag" data-i18n="skill_team">Travail d'équipe</span>
+                        <span class="skill-tag" data-i18n="skill_english">Anglais Technique</span>
                     </div>
                 </div>
 
-                <!-- Carte 3 : Parcours Scolaire -->
                 <div class="about-card">
                     <div class="card-header">
                         <div class="icon-circle">
-                            <!-- Logo Chapeau diplômé -->
                             <i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i>
                         </div>
-                        <h3>Mon Parcours</h3>
+                        <h3 data-i18n="about_path_title">Mon Parcours</h3>
                     </div>
                     
                     <ul class="timeline">
                         <li>
-                            <div class="timeline-date">2025 - Présent</div>
-                            <strong>BUT Réseaux & Télécommunications</strong>
+                            <div class="timeline-date" data-i18n="path_date_1">2025 - Présent</div>
+                            <strong data-i18n="path_degree_1">BUT Réseaux & Télécommunications</strong>
                             <div class="timeline-place">IUT de Béziers (34)</div>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Apprentissage de l'architecture réseau, de la cybersécurité et du développement.</p>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;" data-i18n="path_desc_1">Apprentissage de l'architecture réseau, de la cybersécurité et du développement.</p>
                         </li>
                         <li>
                             <div class="timeline-date">2022-2025</div>
-                            <strong>Baccalauréat Général</strong>
+                            <strong data-i18n="path_degree_2">Baccalauréat Général</strong>
                             <div class="timeline-place">Lycée Irène et Frédéric Joliot-Curie</div>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;" data-i18n="path_desc_2">Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
                         </li>
                     </ul>
                 </div>
@@ -133,44 +126,41 @@
             </div>
         </section>
 
-        <!-- SECTION PROJETS -->
         <section id="projects" class="hidden animate-section">
-            <h2 style="margin-bottom: 30px;">Mes Projets</h2>
+            <h2 style="margin-bottom: 30px;" data-i18n="projects_title">Mes Projets</h2>
             <div class="projects-grid">
                 
-                <!-- PROJET 1 -->
                 <div class="project-card">
                     <img src="sae11.jpg" alt="E-commerce" class="project-img">
                     <div class="project-content">
-                        <h3>SAÉ1.1 - Hygiène informatique et Cybersécurité</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;">Octobre - Novembre 2025</p>
-                        <p style="color: #64748b; margin: 10px 0;">Présentation de la cybersécurité générale sur internet avec vulgarisation.</p>
+                        <h3 data-i18n="proj1_title">SAÉ1.1 - Hygiène informatique</h3>
+                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj1_date">Octobre - Novembre 2025</p>
+                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj1_desc">Présentation de la cybersécurité générale sur internet avec vulgarisation.</p>
                         <div class="tags">
                             <span class="tag">Powerpoint</span>
-                            <span class="tag">Automnomie</span>
-                            <span class="tag">Vulgarisation</span>
+                            <span class="tag" data-i18n="tag_autonomy">Autonomie</span>
+                            <span class="tag" data-i18n="tag_vulgarization">Vulgarisation</span>
                         </div>
                         
-                        <a href="projet-cyber.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
+                        <a href="projet-cyber.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
                             Voir plus
                         </a>
                     </div>
                 </div>
 
-                <!-- PROJET 2 -->
                 <div class="project-card">
                     <img src="sae14.png" alt="Dashboard" class="project-img">
                     <div class="project-content">
-                        <h3>SAÉ1.4 - Se présenter sur Internet</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;">Novembre - Décembre 2025</p>
-                        <p style="color: #64748b; margin: 10px 0;">Professionnalisation des profils en ligne</p>
+                        <h3 data-i18n="proj2_title">SAÉ1.4 - Se présenter en ligne</h3>
+                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj2_date">Novembre - Décembre 2025</p>
+                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj2_desc">Professionnalisation des profils en ligne</p>
                         <div class="tags">
-                            <span class="tag">Profil linkedin</span>
-                            <span class="tag">Portfolio de présentation</span>
-                            <span class="tag">Entretiens professionnel</span>                   
+                            <span class="tag">LinkedIn</span>
+                            <span class="tag">Portfolio</span>
+                            <span class="tag" data-i18n="tag_interview">Entretiens</span>                   
                         </div>
 
-                        <a href="projet-identite.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;">
+                        <a href="projet-identite.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
                             Voir plus
                         </a>
                     </div>
@@ -179,13 +169,11 @@
             </div>
         </section>
 
-        <!-- SECTION CONTACT (Version Finale avec Image Gmail) -->
         <section id="contact" class="hidden animate-section">
-            <h2 style="margin-bottom: 30px;">Me Contacter</h2>
+            <h2 style="margin-bottom: 30px;" data-i18n="contact_title">Me Contacter</h2>
             <div class="contact-layout">
-                <!-- Partie Gauche (Infos) -->
                 <div>
-                    <p style="margin-bottom: 30px; font-size: 1.1rem;">Une idée de projet ? N'hésitez pas à m'écrire pour en discuter.</p>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem;" data-i18n="contact_intro">Une idée de projet ? N'hésitez pas à m'écrire pour en discuter.</p>
                     
                     <div class="contact-card">
                         <div class="icon-box">
@@ -204,45 +192,35 @@
                     </div>
                 </div>
 
-                <!-- Partie Droite (Formulaire) -->
                 <form onsubmit="sendGmail(event)">
                     <div class="form-group">
-                        <label>Nom</label>
-                        <input type="text" id="name" placeholder="Votre nom" required>
+                        <label data-i18n="form_name">Nom</label>
+                        <input type="text" id="name" data-i18n-placeholder="ph_name" placeholder="Votre nom" required>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" id="email" placeholder="votre@email.com" required>
+                        <input type="email" id="email" data-i18n-placeholder="ph_email" placeholder="votre@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+                        <label data-i18n="form_message">Message</label>
+                        <textarea id="message" rows="4" data-i18n-placeholder="ph_message" placeholder="Votre message..." required></textarea>
                     </div>
                     <button class="btn btn-primary" style="width: 100%; justify-content: center;">
-                        Envoyer via Gmail <i data-lucide="send" style="margin-left: 8px; width: 16px;"></i>
+                        <span data-i18n="btn_send">Envoyer via Gmail</span> <i data-lucide="send" style="margin-left: 8px; width: 16px;"></i>
                     </button>
                 </form>
             </div>
 
-            <!-- Script amélioré (Message en premier) -->
             <script>
                 function sendGmail(e) {
                     e.preventDefault();
-
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const message = document.getElementById('message').value;
-
-                    // Sujet
                     const subject = encodeURIComponent("Contact Portfolio - " + name);
-
-                    // Corps du message (Message en premier, signature ensuite)
                     const bodyContent = `${message}\n\n--------------------------------\nEnvoyé par : ${name}\nEmail de contact : ${email}`;
                     const body = encodeURIComponent(bodyContent);
-                    
-                    // Lien Gmail
                     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=leandre.simo34@gmail.com&su=${subject}&body=${body}`;
-                    
                     window.open(gmailUrl, '_blank');
                 }
             </script>
@@ -251,23 +229,17 @@
     </main>
 
     <footer>
-        <p>© 2025 Léandre Simo. Tous droits réservés.</p>
+        <p data-i18n="footer">© 2025 Léandre Simo. Tous droits réservés.</p>
     </footer>
 
-    <!-- Lien vers ton fichier Javascript -->
     <script src="script.js"></script>
 
-    <!-- NOUVEAU SCRIPT : Gère le retour automatique sur l'onglet Projets -->
     <script>
-        // Ce code s'exécute quand la page a fini de charger
         window.addEventListener('load', function() {
-            // Si l'adresse web finit par "#projects"
             if (window.location.hash === '#projects') {
-                // On active la fonction qui change d'onglet
                 switchTab('projects');
             }
         });
     </script>
 </body>
-
 </html>
