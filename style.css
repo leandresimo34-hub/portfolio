@@ -571,6 +571,8 @@ p {
 
 .bg-red { background: #fee2e2; color: #dc2626; }
 .bg-orange { background: #ffedd5; color: #ea580c; }
+.bg-purple { background: #f3e8ff; color: #9333ea; } /* === AJOUT ICI === */
+
 
 .file-name { font-weight: 600; color: #1e293b; }
 .file-size { font-size: 0.8rem; color: #64748b; }

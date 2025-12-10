@@ -80,6 +80,10 @@ const translations = {
         cyber_feedback: "\"Ce projet m'a permis d'apprendre à mieux contrôler les supports visuels tel que Powerpoint, en apprendre plus sur les bonnes pratiques de cybersécurité et d'apprendre à utiliser du matériel vidéo.\"",
         btn_dl_ppt: "Télécharger le diaporama",
         sub_dl_ppt: "Fichier PowerPoint",
+        
+        // AJOUT
+        btn_badge: "Voir le Badge",
+        sub_badge: "Certification Open Badge",
 
         id_title: "SAÉ 1.4 : Se présenter sur Internet",
         id_subtitle: "Construction d'une identité numérique professionnelle cohérente et préparation à l'insertion en entreprise.",
@@ -183,6 +187,10 @@ const translations = {
         cyber_feedback: "\"This project allowed me to learn how to better control visual aids like PowerPoint, learn more about cybersecurity best practices, and learn how to use video equipment.\"",
         btn_dl_ppt: "Download Slides",
         sub_dl_ppt: "PowerPoint File",
+
+        // AJOUT
+        btn_badge: "View Badge",
+        sub_badge: "Open Badge Certification",
 
         id_title: "SAÉ 1.4: Online Presentation",
         id_subtitle: "Building a coherent professional digital identity and preparing for corporate insertion.",
