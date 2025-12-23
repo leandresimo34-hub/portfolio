@@ -108,7 +108,24 @@ const translations = {
         btn_visit: "Visiter la page ↗",
         btn_linkedin: "Mon Profil LinkedIn",
         btn_cv: "Mon CV complet",
-        sub_cv: "Fichier PDF"
+        sub_cv: "Fichier PDF",
+        proj3_title: "SAÉ 1.3 - Découvrir un dispositif de transmission",
+        proj3_date: "Décembre 2025",
+        proj3_desc: "Certification de câblage et conformité physique.",
+        tag_cabling: "Câblage",
+        tag_norms: "Normes & Standards",
+        
+        certif_title: "SAÉ 1.3 : Découvrir un dispositif de transmission",
+        certif_subtitle: "Certification professionnelle et conformité du câblage réseau.",
+        certif_desc_text: "Projet centré sur la couche 1 du modèle OSI. Nous avons réalisé l'installation physique et surtout la certification officielle des liens à l'aide d'outils professionnels pour valider la conformité aux normes en vigueur.",
+        certif_missions_intro: "Outils et techniques :",
+        certif_role_detail: "J'ai assuré la certification des liens cuivres en utilisant l'analyseur Fluke DSX-602, en interprétant les graphiques de diaphonie et d'atténuation.",
+        certif_list_1: "Maîtrise de l'analyseur Fluke DSX-602.",
+        certif_list_2: "Interprétation des tests (Wire Map, NEXT, RL).",
+        certif_list_3: "Validation de la conformité ISO/TIA.",
+        certif_retex_text: "\"J'ai appris que tester un câble ne prouve pas que la bande passant fonctionne correctement, il faut le certifier avec un appareil adapté.\"",
+        btn_report: "Lire le rapport technique",
+        sub_report: "Google Docs"
     },
     en: {
         nav_about: "About",
@@ -215,7 +232,24 @@ const translations = {
         btn_visit: "Visit Page ↗",
         btn_linkedin: "My LinkedIn Profile",
         btn_cv: "My Full CV",
-        sub_cv: "PDF File"
+        sub_cv: "PDF File",
+        proj3_title: "SAÉ 1.3 - Discovering a Transmission Device",
+        proj3_date: "December 2025",
+        proj3_desc: "Cabling certification and physical compliance.",
+        tag_cabling: "Cabling",
+        tag_norms: "Norms & Standards",
+        
+        certif_title: "SAÉ 1.3: Discovering a Transmission Device",
+        certif_subtitle: "Professional certification and network cabling compliance.",
+        certif_desc_text: "Project focused on OSI Layer 1. We performed physical installation and specifically the official certification of links using professional tools to validate compliance with current standards.",
+        certif_missions_intro: "Tools and techniques:",
+        certif_role_detail: "I ensured the certification of copper links using the Fluke DSX-602 analyzer, interpreting crosstalk and attenuation graphs.",
+        certif_list_1: "Mastery of Fluke DSX-602 analyzer.",
+        certif_list_2: "Test interpretation (Wire Map, NEXT, RL).",
+        certif_list_3: "ISO/TIA compliance validation.",
+        certif_retex_text: "\"I learned that testing a cable does not prove that the bandwidth is working properly; it must be certified with a suitable device.\"",
+        btn_report: "Read Technical Report",
+        sub_report: "Google Docs"
     }
 };
 

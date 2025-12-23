@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ 1.3 - Transmission</title>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="project-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Mon portfolio<span>.</span></a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="index.html#projects" class="btn btn-secondary btn-back">
+                    <i data-lucide="arrow-left"></i> <span data-i18n="btn_back">Retour</span>
+                </a>
+                <button class="nav-btn lang-btn" onclick="toggleLanguage()">
+                    <span id="lang-display">EN</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <div class="hero-badges">
+                        <span class="badge-blue"><i data-lucide="clock"></i> 20 Heures</span>
+                        <span class="badge-gray"><i data-lucide="calendar"></i> Déc 2025</span>
+                    </div>
+                    <h1 data-i18n="certif_title">SAÉ 1.3 : Découvrir un dispositif de transmission</h1>
+                    <p class="hero-subtitle" data-i18n="certif_subtitle">Certification professionnelle de câblage et conformité physique.</p>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="sae13.png" alt="Certification Fluke" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="container details-section animate-section">
+            <div class="details-card">
+                <div class="card-content">
+                    <div class="section-block">
+                        <h2 class="title-blue" data-i18n="cyber_desc_title">Description du projet</h2>
+                        <p data-i18n="certif_desc_text">
+                            De la théorie du signal à la certification précise...
+                        </p>
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div>
+                            <h2 class="title-purple" data-i18n="cyber_team_title">L'équipe projet</h2>
+                            <ul class="team-list">
+                                <li><div class="avatar avatar-blue">L</div> <strong>Léandre Simo</strong></li>
+                                <li><div class="avatar avatar-blue">N</div> Nader Skayki</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="title-blue" data-i18n="id_missions_title">Mes missions</h2>
+                            <p class="mb-10" data-i18n="certif_missions_intro">Focus technique :</p>
+                            <div class="tags">
+                                <span class="tag tag-green">Fluke DSX-602</span>
+                                <span class="tag tag-green" data-i18n="tag_cabling">Câblage Cuivre</span>
+                                <span class="tag tag-green" data-i18n="tag_norms">Normes ISO/TIA</span>
+                            </div>
+                            <p class="text-sm mt-15" data-i18n="certif_role_detail">Utilisation de l'analyseur de câble...</p>
+                        </div>
+                    </div>
+
+                    <div class="results-box">
+                        <h2 class="title-dark" data-i18n="id_bilan_title">Bilan personnel</h2>
+                        <div class="results-grid">
+                            <div>
+                                <h3 class="subtitle-blue" data-i18n="id_skills_acq">Compétences acquises</h3>
+                                <ul class="results-list">
+                                    <li data-i18n="certif_list_1">Certification avec Fluke DSX-602.</li>
+                                    <li data-i18n="certif_list_2">Analyse de la diaphonie (NEXT/FEXT).</li>
+                                    <li data-i18n="certif_list_3">Conformité des liens permanents.</li>
+                                </ul>
+                            </div>
+                            <div class="border-left">
+                                <h3 class="subtitle-blue" data-i18n="id_retex_title">Retour d'expérience</h3>
+                                <p class="italic-text" data-i18n="certif_retex_text">"La rigueur..."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="files-grid">
+                        <a href="https://docs.google.com/document/d/1UmiyeZ6TenCImLrqImcPRU23YgqJydwOutu5KYgqKpo/edit?usp=sharing" target="_blank" class="file-card">
+                            <div class="file-icon bg-blue"><i data-lucide="file-text"></i></div>
+                            <div>
+                                <div class="file-name" data-i18n="btn_report">Lire le rapport technique</div>
+                                <div class="file-size" data-i18n="sub_report">Google Docs</div>
+                            </div>
+                            <i data-lucide="external-link" class="download-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p data-i18n="footer">© 2025 Léandre Simo. Tous droits réservés.</p></footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            lucide.createIcons();
+            updateLanguageUI();
+        });
+    </script>
+</body>
+</html>
