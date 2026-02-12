@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ 1.05 - Traitement de Données</title>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="project-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Mon portfolio<span>.</span></a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="index.html#projects" class="btn btn-secondary btn-back">
+                    <i data-lucide="arrow-left"></i> <span data-i18n="btn_back">Retour</span>
+                </a>
+                <button class="nav-btn lang-btn" onclick="toggleLanguage()">
+                    <span id="lang-display">EN</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <div class="hero-badges">
+                        <span class="badge-blue"><i data-lucide="code-2"></i> Python</span>
+                        <span class="badge-gray"><i data-lucide="calendar"></i> Jan 2026</span>
+                    </div>
+                    <h1 data-i18n="data_title">SAÉ 1.05 : Traitement de données</h1>
+                    <p class="hero-subtitle" data-i18n="data_subtitle">Analyse statistique de l'occupation des parkings de Montpellier.</p>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="sae105.png" alt="Data Analysis" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="container details-section animate-section">
+            <div class="details-card">
+                <div class="card-content">
+                    <div class="section-block">
+                        <h2 class="title-blue" data-i18n="data_desc_title">Le Mandat</h2>
+                        <p data-i18n="data_desc_text">
+                            Mandaté par la mairie de Montpellier, l'objectif était d'analyser l'utilisation des parkings voitures et vélos via l'Open Data.
+                        </p>
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div>
+                            <h2 class="title-purple" data-i18n="data_team_title">L'équipe projet</h2>
+                            <ul class="team-list">
+                                <li><div class="avatar avatar-blue">L</div> <strong>Léandre Simo</strong></li>
+                                <li><div class="avatar avatar-blue">R</div>Raphaël Abbadie</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="title-blue" data-i18n="data_analyse_title">Analyses réalisées</h2>
+                            <p class="mb-10" data-i18n="data_analyse_intro">Étude approfondie :</p>
+                            <div class="tags">
+                                <span class="tag tag-green">Python (Pandas)</span>
+                                <span class="tag tag-green">Jupyter Notebook</span>
+                                <span class="tag tag-green">GitHub</span>
+                            </div>
+                            <p class="text-sm mt-15" data-i18n="data_analyse_detail">Identification des saturations et des jours d'affluence.</p>
+                        </div>
+                    </div>
+
+                    <div class="results-box">
+                        <h2 class="title-dark" data-i18n="id_bilan_title">Bilan personnel</h2>
+                        <div class="results-grid">
+                            <div>
+                                <h3 class="subtitle-blue" data-i18n="id_skills_acq">Compétences acquises</h3>
+                                <ul class="results-list">
+                                    <li data-i18n="data_note">Note finale : <strong>16.00</strong></li>
+                                    <li data-i18n="data_list_1">Manipulation de fichiers CSV/JSON.</li>
+                                    <li data-i18n="data_list_2">Génération de graphiques (Matplotlib).</li>
+                                    <li data-i18n="data_list_3">Publication sur GitHub.</li>
+                                </ul>
+                            </div>
+                            <div class="border-left">
+                                <h3 class="subtitle-blue" data-i18n="id_retex_title">Retour d'expérience</h3>
+                                <p class="italic-text" data-i18n="data_retex_text">"J'ai appris à transformer des données brutes en informations exploitables pour la prise de décision."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="files-grid">
+                        <a href="https://github.com/leandresimo34-hub/sae15_miniprojet" target="_blank" class="file-card">
+                            <div class="file-icon bg-purple"><i data-lucide="github"></i></div>
+                            <div>
+                                <div class="file-name" data-i18n="btn_github">Voir le dépôt GitHub</div>
+                                <div class="file-size">Code source</div>
+                            </div>
+                            <i data-lucide="external-link" class="download-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p data-i18n="footer">© 2025 Léandre Simo. Tous droits réservés.</p></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
