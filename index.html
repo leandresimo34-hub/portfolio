@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Léandre Simo</title>
-    
+    <title>Portfolio — Léandre Simo</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <header>
         <div class="nav-container">
             <div class="logo" onclick="switchTab('home')">
-                Portfolio<span>.</span>
+                ls<span>.</span>
             </div>
             <nav class="nav-links">
                 <button class="nav-btn" onclick="switchTab('about')" id="btn-about">
@@ -26,7 +26,6 @@
                 <button class="nav-btn" onclick="switchTab('contact')" id="btn-contact">
                     <i data-lucide="mail"></i> <span data-i18n="nav_contact">Contact</span>
                 </button>
-                
                 <button class="nav-btn lang-btn" onclick="toggleLanguage()">
                     <span id="lang-display">EN</span>
                 </button>
@@ -35,7 +34,8 @@
     </header>
 
     <main class="container">
-        
+
+        <!-- HOME -->
         <section id="home" class="active-section">
             <div class="profile-img-container">
                 <img src="moi.png" alt="Léandre Simo" class="profile-img">
@@ -43,7 +43,7 @@
             <h2 data-i18n="home_hello">Bonjour !</h2>
             <h1><span data-i18n="home_iam">Je suis</span> <span class="gradient-text">Léandre Simo</span></h1>
             <p class="subtitle" data-i18n="home_subtitle">Bienvenue sur mon portfolio. Actuellement étudiant en Bachelor Réseaux et Télécommunications, je vous partage mes projets.</p>
-            
+
             <div class="cta-buttons">
                 <button class="btn btn-primary" onclick="switchTab('projects')">
                     <i data-lucide="code"></i> <span data-i18n="btn_projects">Mes Projets</span>
@@ -54,35 +54,31 @@
             </div>
         </section>
 
+        <!-- ABOUT -->
         <section id="about" class="hidden animate-section">
-            <h2 style="margin-bottom: 30px;" data-i18n="about_title">À Propos de moi</h2>
-            
+            <h2 data-i18n="about_title">À Propos de moi</h2>
+
             <div class="about-grid">
-                
+
                 <div class="about-card">
                     <div class="card-header">
                         <div class="icon-circle">
-                            <i data-lucide="user-circle-2" style="width: 24px; height: 24px;"></i>
+                            <i data-lucide="user-circle-2"></i>
                         </div>
                         <h3 data-i18n="about_who_title">Qui suis-je ?</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.8;" data-i18n="about_who_text1">
-                        Je m'appelle <strong>Léandre Simo</strong>. Actuellement étudiant en 1ère année de BUT Réseaux & Télécommunications, j'ai un attrait pour les nouvelles technologies et le développement système et cloud.
-                    </p>
-                    <p style="color: #475569; margin-top: 15px; line-height: 1.8;" data-i18n="about_who_text2">
-                        Curieux et rigoureux, j'aime les nouveaux challenges et j'aime découvrir de nouvelles façons de travailler et d'apprendre.
-                    </p>
+                    <p data-i18n="about_who_text1">Je m'appelle <strong>Léandre Simo</strong>. Actuellement étudiant en 1ère année de BUT Réseaux & Télécommunications, j'ai un attrait pour les nouvelles technologies et le développement système et cloud.</p>
+                    <p style="margin-top: 14px;" data-i18n="about_who_text2">Curieux et rigoureux, j'aime les nouveaux challenges et j'aime découvrir de nouvelles façons de travailler et d'apprendre.</p>
                 </div>
 
                 <div class="about-card">
                     <div class="card-header">
                         <div class="icon-circle">
-                            <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
+                            <i data-lucide="zap"></i>
                         </div>
                         <h3 data-i18n="about_skills_title">Mes Compétences</h3>
                     </div>
-                    
-                    <h4 style="font-size: 0.9rem; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="skills_tech">Technique</h4>
+                    <p style="font-size:0.78rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;" data-i18n="skills_tech">Technique</p>
                     <div class="skills-list">
                         <span class="skill-tag" data-i18n="skill_telecom">Télécommunications</span>
                         <span class="skill-tag" data-i18n="skill_sysadmin">Administration Système</span>
@@ -90,8 +86,7 @@
                         <span class="skill-tag">Linux</span>
                         <span class="skill-tag">Python</span>
                     </div>
-
-                    <h4 style="font-size: 0.9rem; color: #64748b; margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="skills_soft">Transverse</h4>
+                    <p style="font-size:0.78rem; color: var(--text-muted); margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;" data-i18n="skills_soft">Transverse</p>
                     <div class="skills-list">
                         <span class="skill-tag" data-i18n="skill_project">Gestion de projet</span>
                         <span class="skill-tag" data-i18n="skill_team">Travail d'équipe</span>
@@ -102,23 +97,22 @@
                 <div class="about-card">
                     <div class="card-header">
                         <div class="icon-circle">
-                            <i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i>
+                            <i data-lucide="graduation-cap"></i>
                         </div>
                         <h3 data-i18n="about_path_title">Mon Parcours</h3>
                     </div>
-                    
                     <ul class="timeline">
                         <li>
                             <div class="timeline-date" data-i18n="path_date_1">2025 - Présent</div>
                             <strong data-i18n="path_degree_1">BUT Réseaux & Télécommunications</strong>
                             <div class="timeline-place">IUT de Béziers (34)</div>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;" data-i18n="path_desc_1">Apprentissage de l'architecture réseau, de la cybersécurité et du développement.</p>
+                            <p style="font-size:0.88rem; margin-top: 6px;" data-i18n="path_desc_1">Apprentissage de l'architecture réseau, de la cybersécurité et du développement.</p>
                         </li>
                         <li>
-                            <div class="timeline-date">2022-2025</div>
+                            <div class="timeline-date">2022 – 2025</div>
                             <strong data-i18n="path_degree_2">Baccalauréat Général</strong>
                             <div class="timeline-place">Lycée Irène et Frédéric Joliot-Curie</div>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;" data-i18n="path_desc_2">Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
+                            <p style="font-size:0.88rem; margin-top: 6px;" data-i18n="path_desc_2">Spécialités Mathématiques et NSI.</p>
                         </li>
                     </ul>
                 </div>
@@ -126,123 +120,111 @@
             </div>
         </section>
 
+        <!-- PROJECTS -->
         <section id="projects" class="hidden animate-section">
-            <h2 style="margin-bottom: 30px;" data-i18n="projects_title">Mes Projets</h2>
+            <h2 data-i18n="projects_title">Mes Projets</h2>
             <div class="projects-grid">
-                
+
                 <div class="project-card">
-                    <img src="sae11.jpg" alt="E-commerce" class="project-img">
+                    <img src="sae11.jpg" alt="SAÉ 1.1 Cybersécurité" class="project-img">
                     <div class="project-content">
-                        <h3 data-i18n="proj1_title">SAÉ1.1 - Hygiène informatique</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj1_date">Octobre - Novembre 2025</p>
-                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj1_desc">Présentation de la cybersécurité générale sur internet avec vulgarisation.</p>
+                        <p class="project-date" data-i18n="proj1_date">Octobre – Novembre 2025</p>
+                        <h3 data-i18n="proj1_title">SAÉ 1.1 — Hygiène informatique</h3>
+                        <p data-i18n="proj1_desc">Présentation vulgarisée sur la cybersécurité pour un public novice.</p>
                         <div class="tags">
-                            <span class="tag">Powerpoint</span>
-                            <span class="tag" data-i18n="tag_autonomy">Autonomie</span>
+                            <span class="tag">Cybersécurité</span>
                             <span class="tag" data-i18n="tag_vulgarization">Vulgarisation</span>
                         </div>
-                        
-                        <a href="projet-cyber.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
-                            Voir plus
-                        </a>
+                        <a href="projet-cyber.html" class="btn btn-secondary" data-i18n="btn_see_more">Voir plus</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="sae14.png" alt="Dashboard" class="project-img">
+                    <img src="sae14.png" alt="SAÉ 1.4 Identité" class="project-img">
                     <div class="project-content">
-                        <h3 data-i18n="proj2_title">SAÉ1.4 - Se présenter en ligne</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj2_date">Novembre - Décembre 2025</p>
-                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj2_desc">Professionnalisation des profils en ligne</p>
+                        <p class="project-date" data-i18n="proj2_date">Novembre – Décembre 2025</p>
+                        <h3 data-i18n="proj2_title">SAÉ 1.4 — Se présenter en ligne</h3>
+                        <p data-i18n="proj2_desc">Professionnalisation des profils en ligne.</p>
                         <div class="tags">
                             <span class="tag">LinkedIn</span>
                             <span class="tag">Portfolio</span>
-                            <span class="tag" data-i18n="tag_interview">Entretiens</span>                   
+                            <span class="tag" data-i18n="tag_interview">Entretiens</span>
                         </div>
-
-                        <a href="projet-identite.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
-                            Voir plus
-                        </a>
+                        <a href="projet-identite.html" class="btn btn-secondary" data-i18n="btn_see_more">Voir plus</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="sae13.png" alt="Certification Fluke" class="project-img">
+                    <img src="sae13.png" alt="SAÉ 1.3 Certification" class="project-img">
                     <div class="project-content">
-                        <h3 data-i18n="proj3_title">SAÉ 1.3 - Découvrir un dispositif de transmission</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj3_date">Décembre 2025</p>
-                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj3_desc">Certification de câblage cuivre et fibre optique.</p>
+                        <p class="project-date" data-i18n="proj3_date">Décembre 2025</p>
+                        <h3 data-i18n="proj3_title">SAÉ 1.3 — Certification transmission</h3>
+                        <p data-i18n="proj3_desc">Certification de câblage cuivre et fibre optique.</p>
                         <div class="tags">
                             <span class="tag">Fluke DSX-602</span>
                             <span class="tag" data-i18n="tag_cabling">Câblage</span>
                             <span class="tag" data-i18n="tag_norms">Normes</span>
                         </div>
-                        
-                        <a href="projet-certification.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
-                            Voir plus
-                        </a>
+                        <a href="projet-certification.html" class="btn btn-secondary" data-i18n="btn_see_more">Voir plus</a>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <img src="sae102.png" alt="Réseau" class="project-img">
+                    <img src="sae102.png" alt="SAÉ 1.02 Réseau" class="project-img">
                     <div class="project-content">
-                        <h3 data-i18n="proj_net_title">SAÉ 1.02 - Conception Réseau</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj_net_date">Janvier 2026</p>
-                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj_net_desc">Architecture réseau sécurisée pour une maison d'hôte.</p>
+                        <p class="project-date" data-i18n="proj_net_date">Décembre 2025 – Janvier 2026</p>
+                        <h3 data-i18n="proj_net_title">SAÉ 1.02 — Conception réseau</h3>
+                        <p data-i18n="proj_net_desc">Architecture réseau sécurisée pour une maison d'hôte.</p>
                         <div class="tags">
                             <span class="tag">Cisco</span>
                             <span class="tag">VLAN</span>
                             <span class="tag">Mikrotik</span>
                         </div>
-                        
-                        <a href="projet-reseau.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
-                            Voir plus
-                        </a>
+                        <a href="projet-reseau.html" class="btn btn-secondary" data-i18n="btn_see_more">Voir plus</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="sae105.png" alt="Data" class="project-img">
+                    <img src="sae105.png" alt="SAÉ 1.05 Data" class="project-img">
                     <div class="project-content">
-                        <h3 data-i18n="proj_data_title">SAÉ 1.05 - Traitement de Données</h3>
-                        <p style="color: #2563eb; font-weight: 500; margin: 5px 0; font-size: 0.9rem;" data-i18n="proj_data_date">Janvier 2026</p>
-                        <p style="color: #64748b; margin: 10px 0;" data-i18n="proj_data_desc">Analyse statistique des parkings de Montpellier.</p>
+                        <p class="project-date" data-i18n="proj_data_date">Janvier 2026</p>
+                        <h3 data-i18n="proj_data_title">SAÉ 1.05 — Traitement de données</h3>
+                        <p data-i18n="proj_data_desc">Analyse statistique des parkings de Montpellier.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">Open Data</span>
                             <span class="tag">GitHub</span>
                         </div>
-                        
-                        <a href="projet-data.html" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none;" data-i18n="btn_see_more">
-                            Voir plus
-                        </a>
+                        <a href="projet-data.html" class="btn btn-secondary" data-i18n="btn_see_more">Voir plus</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
             </div>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact" class="hidden animate-section">
-            <h2 style="margin-bottom: 30px;" data-i18n="contact_title">Me Contacter</h2>
+            <h2 data-i18n="contact_title">Me Contacter</h2>
             <div class="contact-layout">
                 <div>
-                    <p style="margin-bottom: 30px; font-size: 1.1rem;" data-i18n="contact_intro">Une idée de projet ? N'hésitez pas à m'écrire pour en discuter.</p>
-                    
+                    <p style="margin-bottom: 28px; font-size: 1.05rem;" data-i18n="contact_intro">Une idée de projet ? N'hésitez pas à m'écrire pour en discuter.</p>
+
                     <div class="contact-card">
                         <div class="icon-box">
-                            <img src="gmail.png" alt="Gmail" style="width: 24px; height: 24px;">
+                            <img src="gmail.png" alt="Gmail" style="width: 22px; height: 22px; filter: brightness(1.2);">
                         </div>
                         <div>
-                            <p style="font-size: 0.9rem; color: #64748b;">Email</p>
-                            <p style="font-weight: 600;">leandre.simo34@gmail.com</p>
+                            <p>Email</p>
+                            <p>leandre.simo34@gmail.com</p>
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
                         <a href="https://www.linkedin.com/in/leandresimo/" target="_blank" class="btn btn-secondary">
                             <i data-lucide="linkedin"></i> LinkedIn
+                        </a>
+                        <a href="cv.pdf" download class="btn btn-secondary">
+                            <i data-lucide="file-text"></i> CV
                         </a>
                     </div>
                 </div>
@@ -260,8 +242,8 @@
                         <label data-i18n="form_message">Message</label>
                         <textarea id="message" rows="4" data-i18n-placeholder="ph_message" placeholder="Votre message..." required></textarea>
                     </div>
-                    <button class="btn btn-primary" style="width: 100%; justify-content: center;">
-                        <span data-i18n="btn_send">Envoyer via Gmail</span> <i data-lucide="send" style="margin-left: 8px; width: 16px;"></i>
+                    <button class="btn btn-primary" type="submit" style="width: 100%; justify-content: center;">
+                        <i data-lucide="send"></i> <span data-i18n="btn_send">Envoyer via Gmail</span>
                     </button>
                 </form>
             </div>
@@ -269,14 +251,12 @@
             <script>
                 function sendGmail(e) {
                     e.preventDefault();
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
+                    const name    = document.getElementById('name').value;
+                    const email   = document.getElementById('email').value;
                     const message = document.getElementById('message').value;
                     const subject = encodeURIComponent("Contact Portfolio - " + name);
-                    const bodyContent = `${message}\n\n--------------------------------\nEnvoyé par : ${name}\nEmail de contact : ${email}`;
-                    const body = encodeURIComponent(bodyContent);
-                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=leandre.simo34@gmail.com&su=${subject}&body=${body}`;
-                    window.open(gmailUrl, '_blank');
+                    const body    = encodeURIComponent(`${message}\n\n---\nEnvoyé par : ${name}\nEmail : ${email}`);
+                    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=leandre.simo34@gmail.com&su=${subject}&body=${body}`, '_blank');
                 }
             </script>
         </section>
@@ -288,13 +268,5 @@
     </footer>
 
     <script src="script.js"></script>
-
-    <script>
-        window.addEventListener('load', function() {
-            if (window.location.hash === '#projects') {
-                switchTab('projects');
-            }
-        });
-    </script>
 </body>
 </html>
